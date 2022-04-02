@@ -57,7 +57,7 @@ body, html {
 
 .title {
     background-color: white;
-    font-size: 48px;
+    font-size: 36px;
     width: fit-content;
     height: fit-content;
     text-align: left;
@@ -71,6 +71,16 @@ body, html {
 .subtitle {
     font-size: 24px;
     font-weight: 700;
+}
+
+.credits {
+    font-size: 14px;
+    font-weight: 300;
+    color: gray;
+    margin-top: 5vh;
+    animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
+    animation-delay: 400ms;
+    animation-fill-mode: both;
 }
 
 .main-input {
