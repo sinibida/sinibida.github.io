@@ -41,7 +41,7 @@ body, html {
 }
 
 .content {
-    margin: 10vh;
+    margin: 10vh 5vw;
 }
 
 .toki-pona {
@@ -97,4 +97,14 @@ body, html {
     animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
     animation-delay: 200ms;
     animation-fill-mode: both;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin: 10vh 10vw;
+    }
+
+    .main-input {
+        width: 70vw;
+    }
 }
