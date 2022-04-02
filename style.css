@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'LinjaPona';
+    src: url('linja-pona-4.9.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LinjaSike';
+    src: url('linja-sike-5.otf') format('opentype');
+}
+
+@keyframes popOut {
+    0%{
+        transform: translate(0px, 48px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px, 0px);
+        opacity: 100;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.background {
+    background: linear-gradient(180deg, rgba(255,221,161,1) 0%, rgba(205,219,231,1) 100%);
+
+    height: 100vh;
+    padding-top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin: 10vh;
+}
+
+.toki-pona-font {
+    font-family: 'LinjaSike', cursive !important;
+}
+
+.title {
+    background-color: white;
+    font-size: 48px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px #00000066;
+    animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+.main-input {
+    height: 50%;
+    width: 80vw;
+    font-size: 48px;
+    margin: 5vh;
+    resize: none;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px #00000066;
+    outline: none;
+    animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
+    animation-delay: 200ms;
+    animation-fill-mode: both;
+}
