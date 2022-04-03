@@ -9,11 +9,11 @@
 }
 
 @keyframes popOut {
-    0%{
+    0% {
         transform: translate(0px, 48px);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: translate(0px, 0px);
         opacity: 100;
     }
@@ -31,17 +31,23 @@ body, html {
 }
 
 .background {
-    background: linear-gradient(180deg, rgba(255,221,161,1) 0%, rgba(205,219,231,1) 100%);
+    background: linear-gradient(180deg, rgba(255, 221, 161, 1) 0%, rgba(205, 219, 231, 1) 100%);
 
     height: 100vh;
     padding-top: 1px;
     display: flex;
     justify-content: left;
-    align-items: start;
+    align-content: stretch;
 }
 
 .content {
-    margin: 10vh 5vw;
+    margin: 10vh 10vh;
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+    align-content: start;
+    flex-direction: column;
+    gap: 5vh;
 }
 
 .toki-pona {
@@ -55,17 +61,41 @@ body, html {
     color: gray;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5vh;
+}
+
 .title {
     background-color: white;
     font-size: 36px;
     width: fit-content;
     height: fit-content;
+    white-space: nowrap;
     text-align: left;
     padding: 12px;
     border-radius: 12px;
     box-shadow: 4px 4px 16px #00000066;
-    animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
+    animation: popOut 0.5s cubic-bezier(.28, .84, .53, 1);
+}
 
+.settings {
+    background-color: white;
+    padding: 12px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    column-gap: 5vh;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px #00000066;
+    animation: popOut 0.5s cubic-bezier(.28, .84, .53, 1);
+    animation-delay: 200ms;
+    animation-fill-mode: both;
 }
 
 .subtitle {
@@ -77,34 +107,50 @@ body, html {
     font-size: 14px;
     font-weight: 300;
     color: gray;
-    margin-top: 5vh;
-    animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
+    animation: popOut 0.5s cubic-bezier(.28, .84, .53, 1);
+    animation-delay: 600ms;
+    animation-fill-mode: both;
+}
+
+.main-input-container {
+    flex-grow: 1;
+    align-self: stretch;
+    display: flex;
+}
+
+.main-input {
+    font-size: 48px;
+    resize: none;
+    padding: 12px;
+    border: none;
+    flex-grow: 1;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px #00000066;
+    outline: none;
+    animation: popOut 0.5s cubic-bezier(.28, .84, .53, 1);
     animation-delay: 400ms;
     animation-fill-mode: both;
 }
 
-.main-input {
-    height: 50%;
-    width: 80vw;
-    font-size: 48px;
-    margin-top: 5vh;
-    resize: none;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 4px 4px 16px #00000066;
-    outline: none;
-    animation: popOut 0.5s cubic-bezier(.28,.84,.53,1);
-    animation-delay: 200ms;
-    animation-fill-mode: both;
+.settings-checkbox-label {
+    font-size: 24px;
+    white-space: nowrap;
 }
 
 @media only screen and (max-width: 600px) {
     .content {
-        margin: 10vh 10vw;
+        margin: 10vh 5vh;
+    }
+
+    .hide-mobile {
+        display: none;
     }
 
     .main-input {
-        width: 70vw;
+        font-size: 24px;
+    }
+
+    .header {
+        flex-direction: column;
     }
 }
