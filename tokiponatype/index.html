@@ -16,20 +16,36 @@
 <body>
 <main class="background">
     <section class="content">
-        <section class="title">
-            <h1 class="toki-pona">
-                mialeositelenetoki-ponaa!<span class="subtitle">v0.1.2</span><br>
-                <span class="toki-pona-caption">mi ale o sitelen e toki-pona a!</span>
-            </h1>
-            <h1 class="subtitle">Let's type toki pona!</h1>
-        </section>
-        <label for="main-input"></label>
-        <textarea id="main-input"
-                  class="main-input toki-pona">toki!</textarea>
+        <div class="header">
+            <div class="title">
+                <h1 class="toki-pona">
+                    mialeositelenetoki-ponaa!<br>
+                    <span class="toki-pona-caption hide-mobile">mi ale o sitelen e toki-pona a!</span>
+                </h1>
+                <h1 class="subtitle hide-mobile">Let's type toki pona!</h1>
+            </div>
+            <div class="settings">
+                <div>
+                    <input type="checkbox" id="checkbox-raw" name="checkbox-raw"/>
+                    <label for="checkbox-raw" class="toki-pona settings-checkbox-label">
+                        kepeken toki INLI<span class="toki-pona-caption">Raw view</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="main-input-container">
+            <label for="main-input"></label>
+            <textarea id="main-input"
+                      class="main-input toki-pona">toki!</textarea>
+        </div>
         <h1 class="credits">
+            v0.1.3 |
             ni li tan jan SPAUPA |
-            musi sitelen : <a href="https://wyub.github.io/tokipona/linjasike" target="_blank" class="credits">linya sike</a> |
-            <a href="https://github.com/sinibida/sinibida.github.io" target="_blank" class="credits">tomo pi lipu ilo (Github)</a>
+            musi sitelen : <a href="https://wyub.github.io/tokipona/linjasike" target="_blank" class="credits">linya
+            sike</a> |
+            <a href="https://github.com/sinibida/sinibida.github.io" target="_blank" class="credits">
+                tomo pi lipu ilo (Github)
+            </a>
         </h1>
     </section>
 </main>
