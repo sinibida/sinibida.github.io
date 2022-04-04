@@ -1,0 +1,77 @@
+@keyframes popOut {
+    0% {
+        transform: translate(0px, 48px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 100;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a { color: inherit; }
+h1 { font-size: inherit; }
+
+.background {
+    background-color: #3a0ca3;
+    color: white;
+
+    height: 100vh;
+}
+
+.block {
+    background-color: white;
+    position: absolute;
+}
+
+.block-1 {
+    background-color: #480ca8;
+    box-shadow: 5px 5px 40px 0 #00000033;
+    border-radius: 16px;
+}
+
+.block-2 {
+    background-color: #560bad;
+    box-shadow: 5px 5px 35px 0 #00000055;
+    border-radius: 12px;
+}
+
+.block-3 {
+    background-color: #7209b7;
+    box-shadow: 5px 5px 30px 0 #00000077;
+    border-radius: 8px;
+}
+
+.block-4 {
+    background-color: #b5179e;
+    box-shadow: 5px 5px 25px 0 #00000099;
+    border-radius: 4px;
+}
+
+.contents {
+    margin: 24px;
+    font-size: 24px;
+}
+
+.title {
+    font-size: 2em;
+    background-color: #F72585;
+    box-shadow: 5px 5px 10px 0 #00000044;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.text {
+    margin-top: 12px;
+}
