@@ -30,6 +30,8 @@ body, html {
     overflow-y: hidden;
 }
 
+a { color: inherit; }
+
 .background {
     background: linear-gradient(180deg, rgba(255, 221, 161, 1) 0%, rgba(205, 219, 231, 1) 100%);
 
